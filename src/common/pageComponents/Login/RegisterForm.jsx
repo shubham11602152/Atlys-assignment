@@ -1,19 +1,26 @@
-import InputField from "../components/InputField";
-import Button from "../components/Button";
+import InputField from "../../components/InputField";
+import Button from "../../components/Button";
 
-function LoginForm({ handleFormState, onClickHandler }) {
+function RegisterForm({ handleFormState, onClickHandler }) {
   return (
     <>
       <h2 className="uppercase text-light text-sm text-center font-medium mb-2">
-        WELCOME BACK
+        SIGN UP
       </h2>
       <h2 className="text-lg text-center font-semibold mb-11">
-        Log into your account
+        Create an account to continue
       </h2>
       <InputField
         type={"text"}
-        label={"Email or Username"}
-        placeholder={"Enter your email or username"}
+        label={"Email"}
+        placeholder={"Enter your email"}
+        inputClassName={"mb-4"}
+        fluid
+      />
+      <InputField
+        type={"text"}
+        label={"Username"}
+        placeholder={"Choose a preferred username"}
         inputClassName={"mb-4"}
         fluid
       />
@@ -30,16 +37,16 @@ function LoginForm({ handleFormState, onClickHandler }) {
         onClick={onClickHandler}
         fluid
       >
-        Login now
+        Continue
       </Button>
       <p className="text-sm font-medium mt-3">
-        <span className="text-placeholder">Not registered yet?</span>{" "}
+        <span className="text-placeholder">Already have an account?</span>{" "}
         <a className="text-neutral" onClick={handleFormState}>
-          Register →
+          Login →
         </a>
       </p>
     </>
   );
 }
 
-export default LoginForm;
+export default RegisterForm;

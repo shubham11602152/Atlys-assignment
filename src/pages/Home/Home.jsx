@@ -1,5 +1,7 @@
+import React from "react";
 import CenteredLayout from "../../common/layouts/CenteredLayout";
 import PostsSection from "../../common/pageComponents/Home/PostsSection";
+import LoginModal from "../../common/pageComponents/Home/LoginModal";
 
 const postsData = [
   {
@@ -35,6 +37,7 @@ const postsData = [
 ];
 
 function Home() {
+  const [open, setOpen] = React.useState(false);
   // const [postsData, setPostData] = React.useState([]);
 
   // React.useEffect(() => {
@@ -46,6 +49,15 @@ function Home() {
   //   }
   //   fetchPosts();
   // }, []);
+
+  const handleModalState = (state) => {
+    setOpen(state);
+  };
+
+  const handlePost = () => {
+    handleModalState(true);
+  };
+
   return (
     <CenteredLayout>
       <h1 className="text-[28px] text-neutral font-medium mb-2">Hello Jane</h1>
@@ -55,8 +67,9 @@ function Home() {
       </p>
 
       <div className="flex flex-col gap-y-4">
-        <PostsSection postsData={postsData} />
+        <PostsSection postsData={postsData} handlePost={handlePost} />
       </div>
+      <LoginModal open={open} handleModalState={handleModalState} />
     </CenteredLayout>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../assets/Logo.svg";
-import LoginForm from "../../common/pageComponents/LoginForm";
-import RegisterForm from "../../common/pageComponents/RegisterForm";
+import LoginForm from "../../common/pageComponents/Login/LoginForm";
+import RegisterForm from "../../common/pageComponents/Login/RegisterForm";
 import Card from "../../common/components/Card";
 import CenteredLayout from "../../common/layouts/CenteredLayout";
 import { Link, useNavigate } from "react-router-dom";

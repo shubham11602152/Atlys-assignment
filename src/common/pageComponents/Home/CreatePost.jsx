@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import EmojiIcon from "../../components/EmojiIcon";
 import InputField from "../../components/InputField";
 
-function CreatePost() {
+function CreatePost({ handlePost }) {
   return (
     <Card>
       <div className="mb-5 flex gap-4 items-center">
@@ -21,9 +20,11 @@ function CreatePost() {
         />
       </div>
       <div className="flex place-content-end">
-        <Link to={"/login"}>
-          <Button variant="primary">Post</Button>
-        </Link>
+        {/* <Link to={"/login"}> */}
+        <Button variant="primary" onClick={handlePost}>
+          Post
+        </Button>
+        {/* </Link> */}
       </div>
     </Card>
   );

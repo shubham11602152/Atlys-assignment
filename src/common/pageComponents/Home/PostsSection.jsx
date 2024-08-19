@@ -2,10 +2,10 @@ import CreatePost from "./CreatePost";
 import PostCard from "./PostCard";
 import { isArray } from "lodash";
 
-function PostsSection({ postsData }) {
+function PostsSection({ postsData, handlePost }) {
   return (
     <>
-      <CreatePost />
+      <CreatePost handlePost={handlePost} />
       {isArray(postsData) &&
         !!postsData.length &&
         postsData?.map((post) => {
