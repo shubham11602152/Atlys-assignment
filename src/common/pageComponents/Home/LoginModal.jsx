@@ -7,7 +7,7 @@ import closeIcon from "../../../assets/Cross 2.svg";
 import { useNavigate } from "react-router-dom";
 import IconButton from "../../components/IconButton";
 
-function LoginModal({ open, handleModalState }) {
+function LoginModal({ onClose }) {
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = React.useState(true);
   const buttonClickHandler = () => {
@@ -17,29 +17,26 @@ function LoginModal({ open, handleModalState }) {
     setIsLogin((prev) => !prev);
   };
   return (
-    open && (
-      <Modal>
-        <Card className="[&&]:px-6 [&&]:py-10 [&&]:max-w-[463px] [&&]:w-screen">
-          <IconButton
-            variant="secondary"
-            onClick={() => handleModalState(false)}
-          >
-            <img src={closeIcon} />
-          </IconButton>
-          {isLogin ? (
-            <LoginForm
-              handleFormState={handleFormState}
-              onClickHandler={buttonClickHandler}
-            />
-          ) : (
-            <RegisterForm
-              handleFormState={handleFormState}
-              onClickHandler={buttonClickHandler}
-            />
-          )}
-        </Card>
-      </Modal>
-    )
+    // open && (
+    <Modal>
+      <Card className="[&&]:px-6 [&&]:py-10 [&&]:max-w-[463px] [&&]:w-screen">
+        <IconButton variant="secondary" onClick={onClose}>
+          <img src={closeIcon} />
+        </IconButton>
+        {isLogin ? (
+          <LoginForm
+            handleFormState={handleFormState}
+            onClickHandler={buttonClickHandler}
+          />
+        ) : (
+          <RegisterForm
+            handleFormState={handleFormState}
+            onClickHandler={buttonClickHandler}
+          />
+        )}
+      </Card>
+    </Modal>
+    // )
   );
 }
 
