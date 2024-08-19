@@ -4,7 +4,7 @@ import Button from "../components/Button";
 
 function LoginForm({ handleFormState }) {
   return (
-    <div>
+    <>
       <h2 className="uppercase text-light text-sm text-center font-medium mb-2">
         WELCOME BACK
       </h2>
@@ -32,7 +32,7 @@ function LoginForm({ handleFormState }) {
           Register →
         </a>
       </p>
-    </div>
+    </>
   );
 }
 

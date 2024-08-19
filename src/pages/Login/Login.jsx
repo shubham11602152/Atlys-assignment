@@ -12,12 +12,12 @@ function Login() {
     setIsLogin((prev) => !prev);
   };
   return (
-    <CenteredLayout>
+    <CenteredLayout className="min-h-[90vh] flex flex-col place-content-center place-items-center">
       <Link to={"/"}>
         <img className="mx-auto mb-12" src={logo} />
       </Link>
 
-      <Card className="[&&]:px-6 [&&]:py-10">
+      <Card className="[&&]:px-6 [&&]:py-10 [&&]:max-w-[463px] [&&]:w-screen">
         {isLogin ? (
           <LoginForm handleFormState={handleFormState} />
         ) : (

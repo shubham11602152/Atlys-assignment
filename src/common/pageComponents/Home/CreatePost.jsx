@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import EmojiIcon from "../../components/EmojiIcon";
@@ -19,7 +20,9 @@ function CreatePost() {
         />
       </div>
       <div className="flex place-content-end">
-        <Button variant="primary">Post</Button>
+        <Link to={"/login"}>
+          <Button variant="primary">Post</Button>
+        </Link>
       </div>
     </Card>
   );

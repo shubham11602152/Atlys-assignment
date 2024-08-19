@@ -4,7 +4,7 @@ import Button from "../components/Button";
 
 function RegisterForm({ handleFormState }) {
   return (
-    <div>
+    <>
       <h2 className="uppercase text-light text-sm text-center font-medium mb-2">
         SIGN UP
       </h2>
@@ -38,7 +38,7 @@ function RegisterForm({ handleFormState }) {
           Login →
         </a>
       </p>
-    </div>
+    </>
   );
 }
 
