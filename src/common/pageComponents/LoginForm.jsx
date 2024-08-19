@@ -1,8 +1,7 @@
-import React from "react";
 import InputField from "../components/InputField";
 import Button from "../components/Button";
 
-function LoginForm({ handleFormState }) {
+function LoginForm({ handleFormState, onClickHandler }) {
   return (
     <>
       <h2 className="uppercase text-light text-sm text-center font-medium mb-2">
@@ -15,15 +14,22 @@ function LoginForm({ handleFormState }) {
         type={"text"}
         label={"Email or Username"}
         placeholder={"Enter your email or username"}
+        inputClassName={"mb-4"}
         fluid
       />
       <InputField
         type={"password"}
         label={"Password"}
         placeholder={"Enter your password"}
+        inputClassName={"mb-4"}
         fluid
       />
-      <Button variant="primary" fluid>
+      <Button
+        className={"mt-5"}
+        variant="primary"
+        onClick={onClickHandler}
+        fluid
+      >
         Login now
       </Button>
       <p className="text-sm font-medium mt-3">

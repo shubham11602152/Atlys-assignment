@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import EmojiIcon from "../../components/EmojiIcon";
+import InputField from "../../components/InputField";
 
 function CreatePost() {
   return (
@@ -13,10 +14,10 @@ function CreatePost() {
       </div>
       <div className="mb-3 flex gap-4 items-center bg-dark rounded-md p-4">
         <EmojiIcon>💬</EmojiIcon>
-        <input
+        <InputField
+          inputClassName={"border-none px-0"}
           type="text-area"
           placeholder="How are you feeling today?"
-          className="w-full text-gray-700 dark:text-light"
         />
       </div>
       <div className="flex place-content-end">

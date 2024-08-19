@@ -23,7 +23,7 @@ function PostCard({
           alt=""
         />
         <div>
-          <h3 className="text-lg font-medium text-gray-700 dark:text-neutral">
+          <h3 className="text-md font-medium text-gray-700 dark:text-neutral">
             {author}
           </h3>
           <span className="text-sm tracking-wide text-gray-600 dark:text-light font-medium">

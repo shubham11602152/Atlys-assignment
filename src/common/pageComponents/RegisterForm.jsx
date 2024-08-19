@@ -1,8 +1,7 @@
-import React from "react";
 import InputField from "../components/InputField";
 import Button from "../components/Button";
 
-function RegisterForm({ handleFormState }) {
+function RegisterForm({ handleFormState, onClickHandler }) {
   return (
     <>
       <h2 className="uppercase text-light text-sm text-center font-medium mb-2">
@@ -15,21 +14,29 @@ function RegisterForm({ handleFormState }) {
         type={"text"}
         label={"Email"}
         placeholder={"Enter your email"}
+        inputClassName={"mb-4"}
         fluid
       />
       <InputField
         type={"text"}
         label={"Username"}
         placeholder={"Choose a preferred username"}
+        inputClassName={"mb-4"}
         fluid
       />
       <InputField
         type={"password"}
         label={"Password"}
         placeholder={"Enter your password"}
+        inputClassName={"mb-4"}
         fluid
       />
-      <Button variant="primary" fluid>
+      <Button
+        className={"mt-5"}
+        variant="primary"
+        onClick={onClickHandler}
+        fluid
+      >
         Continue
       </Button>
       <p className="text-sm font-medium mt-3">
