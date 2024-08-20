@@ -32,7 +32,7 @@ function Modal({ children, ...props }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed left-0 top-0 w-screen h-screen backdrop-blur-sm flex place-items-center place-content-center"
+      className="fixed left-0 top-0 w-full h-full backdrop-blur-sm flex place-items-center place-content-center"
       {...props}
     >
       <motion.div
@@ -41,6 +41,7 @@ function Modal({ children, ...props }) {
         initial="hidden"
         animate="visible"
         exit="exit"
+        className="m-5 w-full max-w-[463px]"
       >
         {children}
       </motion.div>

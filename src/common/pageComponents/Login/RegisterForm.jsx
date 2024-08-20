@@ -42,7 +42,7 @@ function RegisterForm({ handleFormState, onClickHandler }) {
       <p className="text-sm font-medium mt-3">
         <span className="text-placeholder">Already have an account?</span>{" "}
         <a className="text-neutral" onClick={handleFormState}>
-          Login →
+          Login&nbsp;→
         </a>
       </p>
     </>

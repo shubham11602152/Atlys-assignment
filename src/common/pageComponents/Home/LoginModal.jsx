@@ -19,7 +19,7 @@ function LoginModal({ onClose }) {
   return (
     // open && (
     <Modal>
-      <Card className="[&&]:px-6 [&&]:py-10 [&&]:max-w-[463px] [&&]:w-screen">
+      <Card className="[&&]:px-6 [&&]:py-10">
         <IconButton variant="secondary" onClick={onClose}>
           <img src={closeIcon} />
         </IconButton>

@@ -35,7 +35,7 @@ function LoginForm({ handleFormState, onClickHandler }) {
       <p className="text-sm font-medium mt-3">
         <span className="text-placeholder">Not registered yet?</span>{" "}
         <a className="text-neutral" onClick={handleFormState}>
-          Register →
+          Register&nbsp;→
         </a>
       </p>
     </>
