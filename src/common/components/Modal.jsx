@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { createPortal } from "react-dom";
 function Modal({ children, ...props }) {
   const dropIn = {
     hidden: {
@@ -27,7 +28,7 @@ function Modal({ children, ...props }) {
       },
     },
   };
-  return (
+  return createPortal(
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -45,7 +46,8 @@ function Modal({ children, ...props }) {
       >
         {children}
       </motion.div>
-    </motion.div>
+    </motion.div>,
+    document.getElementById("overlay")
   );
 }
 

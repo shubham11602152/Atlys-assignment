@@ -2,7 +2,6 @@ import React from "react";
 import CenteredLayout from "../../common/layouts/CenteredLayout";
 import PostsSection from "../../common/pageComponents/Home/PostsSection";
 import LoginModal from "../../common/pageComponents/Home/LoginModal";
-import { AnimatePresence } from "framer-motion";
 
 function Home() {
   const [open, setOpen] = React.useState(false);
@@ -39,9 +38,7 @@ function Home() {
       <div className="flex flex-col gap-y-4">
         <PostsSection postsData={postsData} handlePost={handlePost} />
       </div>
-      <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
-        {open && <LoginModal open={open} onClose={handleModalClose} />}
-      </AnimatePresence>
+      <LoginModal open={open} onClose={handleModalClose} />
     </CenteredLayout>
   );
 }
